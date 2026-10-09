@@ -1,0 +1,263 @@
+<!-- index.html always browser tries to find the index.html so index2.html will not work. -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- attributes are used to add more information to the tags -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple website created using HTML">
+    <title>Portfolio</title>
+</head>
+<body>
+
+<header>
+        <h1>Portfolio Page</h1>
+        <img src="image/profilephoto.jpg" alt="Profile Picture" height="200">
+</header>
+
+    <!-- heading tag should be used to define ranking or importance of the heading -->
+<main>
+    <h2>Shevya</h2>
+    <p>
+        A Computer Science <b>Graduate</b> <br>
+        With a great interest in <i>Mern Stack</i>
+    </p>
+    <article><strong>
+        I has worked on several projects which helped me gain experience in web development.
+    </strong></article>
+
+<hr>
+
+<section id="Profile" >
+
+    <h3>
+        <strong><u>Profile</u></strong>
+    </h3>
+    <ul type="circle">
+        <li>
+            <a href="education.html" target="_blank">Academic details</a>
+        </li>
+        </br>
+        <li>
+          
+            <a href="https://www.linkedin.com/in/shevi098/?isSelfProfile=true" target ="_top"><img src="image/Linkedin.png" alt="LinkedIn Logo" height="50" ></a>
+        </li>
+        </br>
+        <li>
+            <a href="projects.html" target="_blank">Projects</a>
+        </li>
+        <!-- <li>
+            Skills:
+            <a href="skills.html" target="_blank"></a>
+        </li> -->
+    </ul>
+
+    <!-- absolute link is used to link to a website and relative link is used to link to a file in the same directory or folder. -->
+
+    <big>This is big text </big>
+
+    <small>This is small text</small>
+
+</section>
+
+<hr>
+    <!--subscript and superscript-->
+    <!-- <p>H<sub>2</sub>O is way to important to life</p> -->
+    <!-- <p>2<sup>3</sup> = 8</p> -->
+    <!--Pre tag prints as it is formatting-->
+
+<section id="skills-table">
+
+<h3><u>Skills</u></h3>
+
+    <table border="5">
+
+    <!--Caption tag gives title to the table -->
+        <caption>Technical Skills</caption>
+
+        <!-- th tag gives heading to the rows -->
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Technology</th>
+                <th>Level</th>
+                <th>Project</th>
+            </tr>
+        </thead>
+
+        <!-- tbody  -->
+        <tbody>
+            <tr>
+                <td rowspan="3">Web Development</td>
+                <td>HTML</td>
+                <td>Good</td>
+                <td>Portfolio Website</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Good</td>
+                <td>Flower Shop Website</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Basic</td>
+                <td>Restaurant Website</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Programming</td>
+                <td>Java</td>
+                <td>Good</td>
+                <td>CRUD Application</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Basic</td>
+                <td>CLI Application</td>
+            </tr>
+            <!-- colspan combines the columns together -->
+            <tr>
+                <td colspan="4">More technologies coming soon...</td>
+            </tr>
+        </tbody>
+
+        <!-- Table Footer : Used to add footer to the table -->
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Technologies learned</td>
+                <td>5</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</section>
+
+<hr> 
+
+<section id="hobbies">
+
+    <h3>
+        <u>Hobbies</u>
+    </h3>
+    <div>
+    <ol type="i">
+        <li> Singing and playing musical instruments</li> 
+        <li>Crafting and DIY projects</li>
+        <li>Playing Indoor and outdoor games</li>
+    </ol>
+    </div>
+
+
+</section>
+
+
+<hr>
+
+<!--FORM most important part of the html used to collect data from the user-->
+<!--signup/login/help requests/contact me-->
+<!--action : attribute used to define where the data must go whether it should go to the frontend( to js file) or backned-->
+
+<section id="contact-form">
+
+    <h3><u>Let's Contact:</u></h3>
+
+    <form action="#" method="post">
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+        <br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+
+        <!-- Date -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+        <!-- Radio buttons :With labels we can click on the text also -->
+        <!-- Value attribute : this will go to the backend so it must be synced to the actual tag value  -->
+        <!--Id : shows  uniqueness of the element -->
+        
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- Checkbox -->
+        <label>Interested In:</label>
+        <input type="checkbox" id="html" name="interest" value="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="interest" value="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="javascript" name="interest" value="javascript">
+        <label for="javascript">JavaScript</label>
+        <br><br>
+
+        <!-- Dropdown -->
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason">
+            <option value="">Select an option</option>
+            <option value="job">Job Opportunity</option>
+            <option value="project">Project Discussion</option>
+            <option value="general">General Query</option>
+        </select>
+        <br><br>
+
+        <!-- Message Writing -->
+        <label for="message">Message:</label>
+        <br>
+        <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Write your message here">
+        </textarea>
+        <br><br>
+
+        <!-- File upload -->
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume">
+        <br><br>
+
+        <!-- buttons submit and reset -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</section>
+
+</main>
+    
+    <hr>   
+
+<footer>
+    
+    <address> 
+        Contact: +91xxxxxxxx   
+    <br>
+        Email:<a href="https://mail.google.com/"target="_blank">shevya1901@gmail.com</a>
+    </address>
+
+    <p>
+    <u><i>Documentation of:  &copy;Shevya Sharma</i></u>
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+
